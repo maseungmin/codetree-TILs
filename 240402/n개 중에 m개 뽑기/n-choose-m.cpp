@@ -28,17 +28,14 @@ void findCombination(int cnt)
         return;
     }
 
-    int last = 0;
-    if(cnt>0)
-    {
-        last = result[cnt-1];
-    }
 
-    for(int i=last+1; i<=n; i++)
+    for(int i=1; i<=n; i++)
     {
+        if(cnt==0||i>result[cnt-1]){
         result.push_back(i);
         findCombination(cnt+1);
         result.pop_back();
+        }
     }
 }
 
