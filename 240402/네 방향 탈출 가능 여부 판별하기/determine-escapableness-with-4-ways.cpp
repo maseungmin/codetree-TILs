@@ -54,10 +54,11 @@ void bfs()
             int nr = r+dr[i];
             int nc = c+dc[i];
             //갈 수 있는 길인지 확인
-            if(!Inrange(nr,nc)&&visited[nr][nc]&&map[nr][nc]==0)
-                continue;
-            q.push({nr,nc});
-            visited[nr][nc] = true;
+            if(Inrange(nr,nc)&&!visited[nr][nc]&&map[nr][nc]==1)
+            {
+                q.push({nr,nc});
+                visited[nr][nc] = true;
+            }
         }
     }
     if(flag)
