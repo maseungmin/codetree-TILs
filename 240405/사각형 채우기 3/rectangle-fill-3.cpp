@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int dp[1001]={0,};
+long long dp[1001]={0,};
 
 void process()
 {
